@@ -11351,7 +11351,7 @@ THREE.Loader.prototype = {
 		e.style.padding = "0.5em 0.5em 0.5em 0.5em";
 		e.style.zIndex = 1000;
 
-		e.innerHTML = "Loading ...";
+		e.textContent = "Loading ...";
 
 		return e;
 
@@ -11372,7 +11372,7 @@ THREE.Loader.prototype = {
 
 		}
 
-		this.statusDomElement.innerHTML = message;
+		this.statusDomElement.textContent = message;
 
 	},
 
