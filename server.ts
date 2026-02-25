@@ -134,7 +134,7 @@ const errorhandler = require('errorhandler')
 
 const startTime = Date.now()
 
-const swaggerDocument = yaml.load(fs.readFileSync('./swagger.yml', 'utf8'))
+const swaggerDocument = yaml.safe_load(fs.readFileSync('./swagger.yml', 'utf8'))
 
 const appName = config.get<string>('application.customMetricsPrefix')
 const startupGauge = new Prometheus.Gauge({
@@ -315,7 +315,8 @@ restoreOverwrittenFilesWithOriginals().then(() => {
         req.body = {}
       }
       if (req.body !== Object(req.body)) { // Expensive workaround for 500 errors during Frisby test run (see #640)
-        req.body = JSON.parse(req.body)
+// TODO: Add JSON schema validation
+//         req.body = JSON.parse(req.body)
       }
     }
     next()
