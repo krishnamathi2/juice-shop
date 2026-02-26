@@ -242,7 +242,7 @@ async function createRandomFakeUsers () {
 
   function makeRandomString (length: number) {
     let text = ''
-    const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    const possible = process.env.POSSIBLE  // TODO: Add POSSIBLE to your environment variables
 
     for (let i = 0; i < length; i++) { text += possible.charAt(Math.floor(Math.random() * possible.length)) }
 
