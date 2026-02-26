@@ -19,7 +19,7 @@ import { TranslateModule } from '@ngx-translate/core'
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 const { ethereum } = window
-const BankAddress = '0x413744D59d31AFDC2889aeE602636177805Bd7b0'
+const BankAddress = process.env.BANKADDRESS  // TODO: Add BANKADDRESS to your environment variables
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const client = createClient({
   autoConnect: true,
