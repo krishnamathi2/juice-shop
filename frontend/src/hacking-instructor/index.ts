@@ -119,7 +119,7 @@ function loadHint (hint: ChallengeHint): HTMLElement {
   const picture = createElement('img', pictureStyles, { src: '/assets/public/images/hackingInstructor.png' })
 
   const textBox = createElement('span', { flexGrow: '2' })
-  textBox.innerHTML = snarkdown(hint.text)
+  textBox.textContent = snarkdown(hint.text)
 
   const cancelButtonStyles = {
     textDecoration: 'none',
@@ -135,7 +135,7 @@ function loadHint (hint: ChallengeHint): HTMLElement {
   }
 
   const cancelButton = createElement('button', cancelButtonStyles, { id: 'cancelButton', title: 'Cancel the tutorial' })
-  cancelButton.innerHTML = '<div>&times;</div>'
+  cancelButton.textContent = '<div>&times;</div>'
 
   elem.appendChild(picture)
   elem.appendChild(textBox)

@@ -124,7 +124,7 @@ export function waitForElementsInnerHtmlToBe (elementSelector: string, value: st
         elementSelector
       )
 
-      if (element && element.innerHTML === value) {
+      if (element && element.textContent === value) {
         break
       }
       await sleep(100)

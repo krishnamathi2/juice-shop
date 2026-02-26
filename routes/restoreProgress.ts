@@ -9,7 +9,7 @@ import { type Request, type Response } from 'express'
 import * as challengeUtils from '../lib/challengeUtils'
 import { challenges } from '../data/datacache'
 
-const hashidsAlphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+const hashidsAlphabet = process.env.HASHIDSALPHABET  // TODO: Add HASHIDSALPHABET to your environment variables
 const hashidRegexp = /^[a-zA-Z0-9]+$/
 const invalidContinueCode = 'Invalid continue code.'
 

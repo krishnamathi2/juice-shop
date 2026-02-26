@@ -6,7 +6,7 @@ import { nftABI } from '../data/static/contractABIs'
 import { challenges } from '../data/datacache'
 import * as utils from '../lib/utils'
 
-const nftAddress = '0x41427790c94E7a592B17ad694eD9c06A02bb9C39'
+const nftAddress = process.env.NFTADDRESS  // TODO: Add NFTADDRESS to your environment variables
 const addressesMinted = new Set()
 let isEventListenerCreated = false
 
