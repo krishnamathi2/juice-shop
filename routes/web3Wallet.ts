@@ -6,7 +6,7 @@ import { challenges } from '../data/datacache'
 import * as challengeUtils from '../lib/challengeUtils'
 import { web3WalletABI } from '../data/static/contractABIs'
 
-const web3WalletAddress = '0x413744D59d31AFDC2889aeE602636177805Bd7b0'
+const web3WalletAddress = process.env.WEB3WALLETADDRESS  // TODO: Add WEB3WALLETADDRESS to your environment variables
 const walletsConnected = new Set()
 let isEventListenerCreated = false
 
